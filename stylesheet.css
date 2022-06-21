@@ -1,0 +1,89 @@
+
+/* design for html page */ 
+html{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(90, 90, 90);
+    color: white;
+}
+
+/*control menu for button*/
+.control-menu{
+    width: 100%;
+}
+
+/*common styling for all the buttons*/
+button{
+    position: relative;
+    left: 15px;
+    text-align: center;
+    width: 24%;
+    height: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    border-radius: 25px;
+}
+
+/*specific style for the start button*/
+#start{
+    background-color: green;
+    color: white;
+    border: 10px solid rgb(52, 102, 52);
+}
+/*specific style for the stop button*/
+#stop{
+    background-color: red;
+    color: white;
+    border: 10px solid rgb(156, 65, 65);
+}
+/*specific style for the print button*/
+#print{
+    background-color: rgb(0, 153, 255);
+    color: white;
+    border: 10px solid rgb(77, 142, 185);
+}
+/*specific style for the clear button*/
+#clear{
+    border: none;
+}
+/*styling the area where the text is converted from the speech*/
+.transcript{
+    background-color: black;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    top: 10px;
+    word-wrap: break-word;
+    overflow: auto;
+    color: rgb(0, 110, 255);
+}
+/*styling the final results*/
+#confirm{
+    font-size: larger;
+    padding: 1%;
+}
+/*styling the interim results*/
+#interim{
+    display: inline;
+    font-size: larger;
+    padding: 1%;
+    opacity: 0.5;
+}
+/*styling status of the program*/
+#status{
+    text-align: center;
+    visibility: hidden;
+}
+
+/*styling the page if printed or exported*/
+@media print{
+    #status{
+        display: none;
+    }
+    .control-menu{
+        display: none;
+    }
+    .transcript{
+        color: black;
+        overflow: visible;
+    }
+}

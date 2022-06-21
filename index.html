@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<!--Defining the head-->
+<head>
+    <title>At your Service Sir!!!</title>
+</head>
+<!--Linking the stylesheet and scripts-->
+<script src="script.js"></script>
+<link rel="stylesheet" href="stylesheet.css">
+
+<!--Body goes here...-->
+<body>
+    <!--Status provided here-->
+    <h2 id="status"> Listenting...</h2>
+    <!--Defined a menu for control buttons-->
+    <div class="control-menu">
+        <button id="start" onclick="start()">Start</button><!--Start button for starting the speech recognition and convert to text-->
+        <button id="stop" onclick="stop()">Stop</button><!--Stop button for stopping the speech recognition-->
+        <button id="print" onclick="p()">Print</button><!--Print button for printing the speech to text or export in the form of a pdf-->
+        <button id="clear" onclick="c()">Clear</button><!--Clear button to clear the text if needed-->
+    </div>
+    <!--Text converted from speech is fed here-->
+    <div class="transcript">
+        <div id="confirm"></div><!--Final output is added in this-->
+        <div id="interim"></div><!--Interim results are shown here with a decreased opacity-->
+    </div>
+</body>
+</html>
